@@ -20,6 +20,16 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5rem;
+}
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
@@ -71,11 +81,19 @@ li {
   position: relative;
 }
 .wrapper .logo a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: var(--primary);
   font-size: 2.7rem;
   font-weight: 600;
   padding: 0.5rem;
-  border: 3px solid var(--black);
+  /*border: 3px solid var(--black);*/
+}
+.wrapper .logo a img {
+  width: 45px;
+  height: 45px;
+  margin-right: 0.5rem;
 }
 .wrapper .nav-list {
   display: inline-flex;
