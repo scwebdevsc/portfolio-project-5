@@ -235,7 +235,7 @@ li {
 .hero .right {
   position: absolute;
   right: -7%;
-  bottom: -1%;
+  bottom: -5%;
 }
 .hero .right .img {
   width: 100%;
@@ -521,22 +521,26 @@ li {
 /* ########## FOOTER SECTION ########## */
 .footer {
   background-color: var(--black);
-  padding: 6rem 1rem;
+  padding: 5rem 1rem 2rem 1rem;
   line-height: 3rem;
 }
-.footer-center span {
-  margin-right: 1rem;
+.footer-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .footer-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
   color: var(--white);
+}
+.footer-center i {
+  color: var(--primary);
+  margin-right: 0.5rem;
 }
 .footer-center a:link,
 .footer-center a:visited {
   display: block;
   color: #f1f1f1;
-  font-size: 1.4rem;
+  font-size: 2.5rem;
   transition: all 0.6s ease;
 }
 .footer-center a:hover {
@@ -544,7 +548,7 @@ li {
 }
 .footer-center div {
   color: #f1f1f1;
-  font-size: 1.4rem;
+  font-size: 3rem;
 }
 .footer-center h3 {
   font-size: 1.8rem;
@@ -553,6 +557,16 @@ li {
 }
 .footer .payment-methods {
   margin-top: 2rem;
+}
+.copy-right {
+  text-align: center;
+  margin-top: 4rem;
+}
+.copy-right a {
+  color: var(--primary);
+}
+.copy-right a:hover {
+  text-decoration: underline;
 }
 /* ########## END OF FOOTER SECTION ########## */
 /* ########## PRODUCTS PAGE ########## */
@@ -822,13 +836,16 @@ th:last-child {
 }
 /* ########## END OF CART PAGE ########## */
 /* ########## MEDIA QUERIES ########## */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
+  .hero .right img {
+    height: 70rem;
+  }
+}
+@media only screen and (max-width: 1225px) {
   .container {
     padding: 0 3rem;
   }
-  .hero .right img {
-    height: 50rem;
-  }
+  
   .hero .left span {
     font-size: 1.7rem;
   }
@@ -839,13 +856,16 @@ th:last-child {
     font-size: 1.6rem;
   }
 }
-@media only screen and (max-width: 998px) {
+@media only screen and (max-width: 1150px) {
+  .hero .right img {
+    height: 60rem;
+  }
+}
+@media only screen and (max-width: 1005px) {
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 2rem;
   }
-}
-@media only screen and (max-width: 996px) {
   .hero .left {
     top: 30%;
   }
@@ -853,7 +873,7 @@ th:last-child {
     right: -10%;
   }
   .hero .right img {
-    height: 35rem;
+    height: 55rem;
   }
   .promotion-layout {
     grid-template-columns: repeat(2, 1fr);
@@ -994,6 +1014,14 @@ th:last-child {
     padding-left: 2rem;
   }
 }
+@media only screen and (max-width: 900px) {
+.footer-center {
+  flex-direction: column;
+  }
+.footer-center a {
+  margin-bottom: 2rem;
+}
+}
 @media only screen and (max-width: 800px) {
   .product-details .details {
     grid-template-columns: 1fr;
@@ -1011,6 +1039,14 @@ th:last-child {
   .product-details .thumbnail {
     width: 6rem;
     height: 6rem;
+  }
+}
+@media only screen and (max-width: 845px) {
+  .hero .right {
+    right: -10%;
+  }
+  .hero .right img {
+    height: 45rem;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -1043,7 +1079,14 @@ th:last-child {
     grid-template-columns: 1fr;
   }
 }
-
+@media only screen and (max-width: 645px) {
+  .hero .right {
+    right: -10%;
+  }
+  .hero .right img {
+    height: 35rem;
+  }
+}
 @media only screen and (max-width: 567px) {
   .hero .left {
     top: 25%;
@@ -1053,12 +1096,6 @@ th:last-child {
   }
   .hero .left h1 {
     font-size: 3rem;
-  }
-  .hero .right {
-    right: -18%;
-  }
-  .hero .right img {
-    height: 30rem;
   }
   .promotion-layout {
     grid-template-columns: 1fr;
@@ -1073,5 +1110,31 @@ th:last-child {
   }
   .cart-info p {
     display: none;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .hero .right {
+    right: -15%;
+  }
+}
+@media only screen and (max-width: 387px) {
+  .hero .right {
+    right: -20%;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .hero .right {
+    right: -20%;
+  }
+  .hero .right img {
+    height: 30rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .hero .right {
+    right: -22%;
+  }
+  .hero .right img {
+    height: 28rem;
   }
 }
